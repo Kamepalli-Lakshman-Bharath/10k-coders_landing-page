@@ -1,0 +1,10 @@
+.SuccessStories {
+  display: flex;
+  padding: 20px;
+  overflow-x: auto;
+  width: 100%;
+  column-gap: 60px;
+}
+.SuccessStories::-webkit-scrollbar {
+  display: none;
+}

@@ -1,0 +1,13 @@
+.card {
+  transition: all 0.5s ease-in;
+  width: 24rem;
+  background-color: #fff;
+  padding: 0.5rem;
+  flex-shrink: 0;
+}
+.card:hover {
+  width: 420px;
+}
+.card:hover .text {
+  letter-spacing: -0.2;
+}
