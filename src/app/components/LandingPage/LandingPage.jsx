@@ -13,8 +13,8 @@ export default function LandingPage() {
         <TopBar getClickedItem={getItem} />
         <div className="flex">
           <div className=" pl-14 w-1/2">
-            <div className=" ml-10 mb-10 mt-20 w-40 font-bold text-xl">
-              Welcome to &nbsp;
+            <div className=" ml-10 text-start mb-10 mt-20 w-40 font-bold text-2xl">
+              Welcome to <br />
               <span style={{ color: "#ff8541" }}>10000</span> coders
             </div>
             <p className="ml-10 mb-6 w-9/12 font-bold text-5xl">
