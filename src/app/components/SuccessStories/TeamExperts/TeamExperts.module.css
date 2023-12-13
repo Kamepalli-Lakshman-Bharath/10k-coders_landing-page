@@ -1,0 +1,6 @@
+@media screen and (width>=425px) and (width<640px) {
+  .flex {
+    flex-direction: column;
+    gap: 40px;
+  }
+}

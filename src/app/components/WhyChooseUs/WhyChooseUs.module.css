@@ -29,3 +29,8 @@
 .card:hover .text {
   transform: translate(100px, -200px);
 }
+@media screen and (width>=425px) and (width<640px) {
+.main{
+  padding-bottom: 20px;
+}
+}

@@ -5,24 +5,24 @@ export default function StudentCard(props) {
   return (
     <div
       style={{ boxShadow: " 0px 4px 10px 0px rgba(0, 0, 0, 0.25)" }}
-      className={styles.card}
+      className={`${styles.card}`}
     >
       <div>
         <img
           src={img}
-          className={`block mx-auto rounded-full h-36 w-36 ${styles.profile}`}
+          className={`mx-auto block h-36 w-36 rounded-full ${styles.profile}`}
           alt={name}
         />
       </div>
-      <p className=" text-center text-xl my-4 font-semibold">{role}</p>
+      <p className=" my-4 text-center text-xl font-semibold">{role}</p>
       <img
-        className={` h-12 mx-auto my-6 px-2 w-44 ${styles.img}`}
+        className={` mx-auto my-6 h-12 w-44 px-2 ${styles.img}`}
         src={companyLogo}
         alt=""
       />
       <p className={`${styles.text} h-40 `}>{successStory}</p>
       <p
-        className={` text-center text-lg text-[#f57932] font-bold ${styles.package}`}
+        className={` text-center text-lg font-bold text-[#f57932] ${styles.package}`}
       >
         Package : {ctc}
       </p>

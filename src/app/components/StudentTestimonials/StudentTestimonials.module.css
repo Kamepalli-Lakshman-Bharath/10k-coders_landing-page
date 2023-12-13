@@ -10,3 +10,8 @@
   padding: 15px;
   column-gap: 30px;
 }
+@media screen and (width>=425px) and (width<640px) {
+  .main {
+    padding: 20px 10px ;
+  }
+}

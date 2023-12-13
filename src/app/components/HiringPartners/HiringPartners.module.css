@@ -208,3 +208,24 @@
 }
 
 /* Your existing styles for other elements... */
+@media screen and (min-width: 640px) and (max-width: 767px) {
+  .divbox {
+    padding: 40px;
+  }
+}
+@media screen and (max-width: 640px)  {
+  .divbox {
+    padding: 40px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .divbox {
+    padding: 50px;
+  }
+}
+@media screen and (min-width: 1224px) {
+  .divbox {
+    padding: 70px;
+  }
+}
+

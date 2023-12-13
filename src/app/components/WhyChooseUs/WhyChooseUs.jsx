@@ -3,20 +3,20 @@ import styles from "./WhyChooseUs.module.css";
 
 export default function WhyChooseUs() {
   return (
-    <div style={{ backgroundColor: "#dbf2fc", height: "100vh" }}>
-      <p className="text-center pt-4 pb-6 font-bold text-2xl">
+    <div className={`xl:h-[100vh] ${styles.main}`} style={{ backgroundColor: "#dbf2fc" }}>
+      <p className="pb-6 pt-4 text-center  text-2xl font-bold">
         {" "}
         Why Choose Us?
       </p>
-      <p className="text-center font-light text-xl mb-3">
+      <p className="text-center px-[20px]  mb-4 sm:px-6 text-xl">
         Exceptional instructors fueling innovation and shaping future tech
         leaders with their expertise, <br /> guidance, and unwavering passion
         for education
       </p>
-      <div className="flex gap-8 flex-wrap border justify-center">
+      <div className="flex flex-wrap justify-center gap-8 border sm:pb-10">
         <div
           style={{ boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)" }}
-          className={`w-96 h-64 ${styles.card} rounded-2xl overflow-hidden`}
+          className={`h-64 w-96 ${styles.card} relative overflow-hidden rounded-2xl`}
         >
           {" "}
           <img
@@ -37,7 +37,7 @@ export default function WhyChooseUs() {
         </div>
         <div
           style={{ boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)" }}
-          className={`w-96 h-64 ${styles.card} rounded-2xl overflow-hidden`}
+          className={`h-64 w-96 ${styles.card} relative overflow-hidden rounded-2xl`}
         >
           {" "}
           <img
@@ -56,7 +56,7 @@ export default function WhyChooseUs() {
         </div>
         <div
           style={{ boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)" }}
-          className={`w-96 h-64 ${styles.card} rounded-2xl overflow-hidden`}
+          className={`h-64 w-96 ${styles.card} relative overflow-hidden rounded-2xl`}
         >
           {" "}
           <img
@@ -78,7 +78,7 @@ export default function WhyChooseUs() {
         </div>
         <div
           style={{ boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)" }}
-          className={`w-96 h-64 ${styles.card} rounded-2xl overflow-hidden`}
+          className={`h-64 w-96 ${styles.card} relative overflow-hidden rounded-2xl`}
         >
           {" "}
           <img
@@ -100,7 +100,7 @@ export default function WhyChooseUs() {
         </div>
         <div
           style={{ boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)" }}
-          className={`w-96 h-64 ${styles.card} rounded-2xl overflow-hidden`}
+          className={`h-64 w-96 ${styles.card} relative overflow-hidden rounded-2xl`}
         >
           {" "}
           <img
@@ -121,7 +121,7 @@ export default function WhyChooseUs() {
         </div>
         <div
           style={{ boxShadow: "0px 4px 4px 0px rgba(0, 0, 0, 0.25)" }}
-          className={`w-96 h-64 ${styles.card} rounded-2xl overflow-hidden`}
+          className={`h-64 w-96 ${styles.card} relative overflow-hidden rounded-2xl`}
         >
           {" "}
           <img

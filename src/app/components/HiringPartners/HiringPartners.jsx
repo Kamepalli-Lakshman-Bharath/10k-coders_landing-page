@@ -3,12 +3,12 @@ import styles from "./HiringPartners.module.css";
 
 export default function HiringPartners() {
   return (
-    <div style={{ height: "100vh" }} className={`${styles.Hiring_partners} `}>
+    <div className={`${styles.Hiring_partners} xl:h-[100vh]`}>
       <div>
-        <h3 className=" text-center  pb-3 font-bold text-2xl">
+        <h3 className=" pb-3  text-center text-2xl font-bold">
           Hiring Partners
         </h3>
-        <p className=" text-center font-light text-xl mb-3">
+        <p className=" mb-3 text-center text-xl font-light">
           Hiring partners for 10000coders are industry collaborators who help
           identify and connect skilled individuals with relevant job
           opportunities, fostering a successful transition into the tech
@@ -16,9 +16,9 @@ export default function HiringPartners() {
         </p>
       </div>
 
-      <div className={`${styles.line1}  gap-x-[30px] flex `}>
-        <div className={`${styles.box1} ${styles.divbox}`}></div>
+      <div className={`${styles.line1} mt-10 flex gap-x-[30px] `}>
         <div className={`${styles.box2} ${styles.divbox}`}></div>
+        <div className={`${styles.box1} ${styles.divbox}`}></div>
         <div className={`${styles.box3} ${styles.divbox}`}></div>
         <div className={`${styles.box4} ${styles.divbox}`}></div>
         <div className={`${styles.box5} ${styles.divbox}`}></div>

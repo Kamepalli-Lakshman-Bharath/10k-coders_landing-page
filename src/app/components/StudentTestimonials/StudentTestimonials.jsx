@@ -15,13 +15,13 @@ export default function StudentTestimonials() {
   ];
   return (
     <div
-      className="box-border"
-      style={{ backgroundColor: "#dbf2fc", height: "100vh" }}
+      className={`${styles.main} box-border xl:h-[100vh]`}
+      style={{ backgroundColor: "#dbf2fc" }}
     >
-      <p className="text-center py-5 font-bold text-2xl">
+      <p className="py-5 text-center font-bold text-2xl">
         Student Testimonials
       </p>
-      <p className="text-center font-light text-xl mb-3">
+      <p className="mb-3 text-center text-xl font-light sm:px-5">
         Students generously share heartfelt testimonials, reflecting the
         exceptional learning and <br /> transformative experiences they've had
         at the 10000coders.
@@ -56,10 +56,10 @@ export default function StudentTestimonials() {
           img={StudentTestimonialsData[1].img}
         />
       </div>
-      <div class="flex justify-center  my-20">
+      <div class="flex justify-center sm:py-10  ">
         <button
           style={{ boxShadow: "0px 4px 10px 0px rgba(0, 0, 0, 0.25)" }}
-          className="font-semibold px-8  py-3  bg-white p-3 rounded-xl"
+          className="rounded-xl bg-white  p-3  px-8 py-3 font-semibold"
         >
           Watch More{" "}
           <img className="inline" src="/Other_images/YoutubeLogo.svg" alt="" />{" "}

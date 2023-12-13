@@ -47,16 +47,16 @@ export default function SuccessStories() {
   ];
 
   return (
-    <div style={{ height: "100vh" }}>
-      <p className="text-center box-border pt-4 pb-6 font-bold text-2xl">
+    <div >
+      <p className="box-border pb-6 pt-4 text-center text-2xl font-bold">
         Success Stories
       </p>
-      <p className="text-center text-xl font-light mb-3">
+      <p className="mb-3 text-center text-xl font-light sm:px-5">
         Our team births success stories by equipping individuals with
         cutting-edge skills and knowledge, <br /> propelling them towards
         coveted positions at top-tier companies across India.
       </p>
-      <div className={styles.SuccessStories}>
+      <div className={`${styles.SuccessStories} sm:mb-10`}>
         {successStories.map((item) => {
           return (
             <>

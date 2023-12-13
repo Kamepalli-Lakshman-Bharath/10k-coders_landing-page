@@ -85,138 +85,145 @@ export default function Courses() {
     setActiveModuleNum(num);
   };
   return (
-    <div id="Course" style={{ backgroundColor: "#dbf2fc", height: "100vh" }}>
-      <p className=" flex-1  font-semibold text-2xl text-center pt-4 pb-6 ">
+    <div
+      id="Course"
+      className="bg-white xl:h-[100vh]"
+      style={{ backgroundColor: "#dbf2fc" }}
+    >
+      <h1 className={`${styles.heading} flex-1 pb-6 pt-4 text-center text-2xl font-semibold `}>
         Courses that we Offer
-      </p>
-      <div className="flex  justify-around">
-        <div className=" flex-shrink-0  w-96 shadow-2xl rounded-[10px] overflow-hidden">
+      </h1>
+      <div className={` ${styles.flex} flex sm:flex-col  xl:flex-row`}>
+        <div
+          className={`w-96 ${styles.card1} overflow-hidden rounded-[10px] shadow-2xl sm:mx-auto sm:mb-10`}
+        >
           <img src="/courses_images/courseheading.png" alt="Course-heading" />
-
           <div className=" bg-white p-4 ">
-            <p className="  font-semibold py-2  ">Course Outcome</p>
-            <p className="pb-2" style={{ color: "#838383" }}>
+            <p className="  py-2 font-semibold  ">Course Outcome</p>
+            <h3 className="pb-2" style={{ color: "#838383" }}>
               Full-stack Front-end Developer
-            </p>
-            <h3 className="  font-semibold py-1  ">What You Will Learn</h3>
-            <p className=" tracking-tighter pb-2" style={{ color: "#838383" }}>
-              HTML,CSS,JavaScript,responsive design,user interface (UI)
-              design,web accessibility,version control(Git),browser
-              compatibility,front-end frameworks(e.g.,React,Angular,Vue.js).CSS
-              preprocessors(e.g.,Sass,Less),DOM manipulation,web performance
-              optimization,cross-browser testing,progressive web
-              apps(PWAs),JavaScript libraries(e.g.,JQuery),front-end build tools
-              etc.
-            </p>
+            </h3>
+            <h3 className="  py-1 font-semibold  ">What You Will Learn</h3>
+            <p1 className="pb-2 tracking-tighter" style={{ color: "#838383" }}>
+              HTML, CSS, JavaScript, responsive design, user interface (UI)
+              design, web accessibility, version control (Git), browser
+              compatibility, front-end frameworks (e.g., React, Angular, Vue.js).
+              CSS preprocessors (e.g., Sass, Less), DOM manipulation, web
+              performance optimization, cross-browser testing, progressive web
+              apps (PWAs), JavaScript libraries (e.g.,JQuery), front-end build
+              tools etc.
+            </p1>
             <p
-              className=" cursor-pointer text-xl pt-8 pb-2  font-semibold text-center"
-              style={{ color: "#ff8541" }}
+              className={` ${styles.cardSpecialText} cursor-pointer pb-4 pt-8 text-center  text-xl font-semibold`}
+              style={{ color: "#ff8541"} } 
             >
               Enroll Now
             </p>
           </div>
         </div>
-        <div className="w-4/6  rounded-[10px] shadow-2xl bg-white">
-          <p className=" p-4 text-[#AEAEAE] text-xl">Duration : 8 weeks</p>
-          <div className="flex justify-around">
-            <div className=" cursor-pointer text-sm flex flex-col gap-y-[1px] box-border  w-[35%]">
+        <div className={` ${styles.card2} rounded-[10px] bg-white shadow-2xl sm:mx-auto sm:mb-10  sm:w-[89%] sm:p-3 xl:w-4/6 xl:p-0`}>
+          <p className=" p-3 text-xl text-[#AEAEAE]">Duration : 8 weeks</p>
+          <div className="flex p-2 justify-between">
+            <div className=" box-border flex w-[30%] cursor-pointer flex-col gap-y-[1px]  text-sm">
               {" "}
               {/* left div */}
               <div
                 onClick={() => {
                   handleActiveModule(1);
                 }}
-                className={` p-2 h-[106px] 5ounded-[10px]   ${
+                className={` cursor-pointer h-[105px] rounded-[10px] p-2   ${
                   activeModule["1"] === true ? styles.active : ""
                 }`}
               >
                 Module 1
-                <div className="flex justify-between items-center w-[100%]">
-                  <p className="  font-semibold   ">
+                <div className="flex w-[100%] items-center justify-between">
+                  <p className={`${styles.leftHeading} mt-[2%] font-semibold`}>
                     Introduction to <br /> Web Development <br /> and HTML
                   </p>
-                  <p> 1 week</p>
+                  <p className={`${styles.leftHeading}`}> 1 week</p>
                 </div>
               </div>
               <div
                 onClick={() => {
                   handleActiveModule(2);
                 }}
-                className={` p-2 h-[105px] rounded-[10px] ${
+                className={` cursor-pointer h-[105px] rounded-[10px] p-2 ${
                   activeModule["2"] === true ? styles.active : ""
                 }`}
               >
                 Module 2
-                <div className="flex justify-between items-center w-[100%]">
-                  <p className="  font-semibold   ">CSS Fundamentals</p>
-                  <p> 1 week</p>
+                <div className="mt-[5%] flex w-[100%] justify-between">
+                  <p className={`${styles.leftHeading}  font-semibold`}>
+                    CSS Fundamentals
+                  </p>
+                  <p className={`${styles.leftHeading}`}> 1 week</p>
                 </div>
               </div>
               <div
                 onClick={() => {
                   handleActiveModule(3);
                 }}
-                className={`  p-2 h-[105px] rounded-[10px] ${
+                className={` box-border  cursor-pointer h-[105px] rounded-[10px] p-2 ${
                   activeModule["3"] === true ? styles.active : ""
                 }`}
               >
                 Module 3
-                <div className="flex justify-between items-center w-[100%]">
-                  <p className="  font-semibold   ">
+                <div className="box-border  flex h-[80%] w-[100%] items-center justify-between">
+                  <p className={`${styles.leftHeading} font-semibold`}>
                     Responsive Web <br /> Design
                   </p>
-                  <p> 1 week</p>
+                  <p className={`${styles.leftHeading}`}> 1 week</p>
                 </div>
               </div>
               <div
                 onClick={() => {
                   handleActiveModule(4);
                 }}
-                className={` p-2 h-[105px] rounded-[10px] ${
+                className={`cursor-pointer h-[105px] rounded-[10px] p-2 ${
                   activeModule["4"] === true ? styles.active : ""
                 }`}
               >
                 Module 4
-                <div className="flex justify-between items-center w-[100%]">
-                  <p className="  font-semibold   ">JavaScript Basics</p>
-                  <p> 2 week</p>
+                <div className="mt-[5%] flex  w-[100%] items-center justify-between">
+                  <p className={` ${styles.leftHeading} font-semibold`}>JavaScript Basics</p>
+                  <p className={`${styles.leftHeading}`}> 2 week</p>
                 </div>
               </div>
               <div
                 onClick={() => {
                   handleActiveModule(5);
                 }}
-                className={` p-2 h-[105px] rounded-[10px] ${
+                className={` cursor-pointer h-[105px] rounded-[10px] p-2 ${
                   activeModule["5"] === true ? styles.active : ""
                 }`}
               >
                 Module 5
-                <div className="flex justify-between items-center w-[100%]">
-                  <p className="  font-semibold   ">
+                <div className="flex w-[100%] items-center justify-between">
+                  <p className={`${styles.leftHeading} mt-[5%] font-semibold`}>
                     Front-end Tools <br /> and Libraries
                   </p>
-                  <p> 2 week</p>
+                  <p className={`${styles.leftHeading}`}> 2 week</p>
                 </div>
               </div>
             </div>
             <div className=" box-border w-[60%]">
               <p className="py-2">{curriculum[activeModuleNum - 1].week}</p>
-              <hr className=" mb-8 bg-gradient-to-r from-[#F87B34] to-[#CB5C1C] h-1" />
+              <hr className=" mb-8 h-1 bg-gradient-to-r from-[#F87B34] to-[#CB5C1C]" />
 
               <ul className="list-disc">
                 <li className=" ml-10 font-semibold">
                   {curriculum[activeModuleNum - 1].title}
-                  <ul className="list-disc font-normal ml-10 flex  mt-6 flex-col gap-y-6">
+                  <ul className={`ml-10 ${styles.car2Text} mt-6 flex list-disc  flex-col gap-y-6 font-normal`}>
                     {curriculum[activeModuleNum - 1].points.map(
                       (point, idx) => (
                         <li key={idx}>{point}</li>
-                      )
+                      ),
                     )}
                   </ul>
                 </li>
               </ul>
-              <hr className=" mt-8 bg-gradient-to-r from-[#F87B34] to-[#CB5C1C] h-1" />
-              <p className=" ml-[30%] cursor-pointer my-8 text-[#F87B34] font-bold text-lg inline-block ">
+              <hr className=" mt-8 h-1 bg-gradient-to-r from-[#F87B34] to-[#CB5C1C]" />
+              <p className={` ${styles.cardSpecialText} my-8 ml-[30%] inline-block cursor-pointer text-lg font-bold text-[#F87B34] `}>
                 Download Curriculam
               </p>
             </div>{" "}

@@ -1,0 +1,30 @@
+@media screen and (width>=425px) and (width<640px) {
+.main{
+    font-size: x-small;
+    justify-content: space-around;
+    padding-bottom: 20px;
+}
+.logo{
+    height: 45px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.heading{
+ font-size: small;
+}
+.icon{
+ height: 15px;
+}
+.img{
+ height: 15px;
+ margin-right: 10px;
+}
+.last{
+    width: 90px;
+}
+.first{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+}

@@ -1,22 +1,25 @@
 "use client";
+import styles from "./TeamExperts.module.css";
 
 export default function TeamExperts() {
   return (
-    <div className=" px-16  pb-16" style={{ height: "100vh" }}>
-      <p className="text-center pt-4 pb-6 font-bold text-2xl"> Team Experts</p>
-      <p className="text-center font-light mb-3 text-xl">
+    <div className=" px-16 pb-16 xl:h-[100vh]">
+      <p className="pb-6 pt-4 text-center text-2xl font-bold"> Team Experts</p>
+      <p className="mb-3 text-center text-xl font-light">
         Exceptional instructors fueling innovation and shaping future tech
         leaders with their expertise, <br /> guidance, and unwavering passion
         for education.
       </p>
-      <div className=" flex justify-center mt-5 gap-x-8 ">
+      <div
+        className={`mt-5 flex justify-center gap-x-8 ${styles.flex}  sm:flex-col sm:gap-y-10 xl:flex-row `}
+      >
         <div
           style={{
             width: "366px",
             height: "553px",
             boxShadow: "0px 4px 10px 0px rgba(0, 0, 0, 0.25)",
           }}
-          className=" overflow-hidden box-border rounded-2xl"
+          className=" box-border overflow-hidden rounded-2xl sm:mx-auto"
         >
           <img className="mx-auto" src="/experts_images/image1.png" />
           <div
@@ -26,21 +29,21 @@ export default function TeamExperts() {
                 "linear-gradient(123deg, #5F2C51 -4.94%, #8B3654 90.42%)",
             }}
           >
-            <p className=" text-white font-bold text-2xl mt-7 mb-5">
+            <p className="  mb-5 mt-7 text-2xl font-bold text-white">
               {" "}
               Anil Kumar Ghorakav
             </p>
             <p className=" mb-5 text-2xl text-white">Ex Company : </p>
             <img
-              className="p-2 mr-2.5 bg-white inline rounded-2xl"
+              className="mr-2.5 inline rounded-2xl bg-white p-2"
               src="/Other_images/Amazon_logo.svg"
             />
             <img
-              className="p-4  bg-white inline rounded-2xl"
+              className="inline  rounded-2xl bg-white p-4"
               src="/Other_images/Oracle_logo.svg"
               alt=""
             />
-            <p className="mt-5 text-white text-sm">
+            <p className="mt-5 text-sm text-white">
               As an entrepreneur who’s constantly finding ways to help people
               reach greater heights in their career and an Ex-Oracle guy, I know
               exactly what it takes to launch a career in the IT industry. The
@@ -55,7 +58,7 @@ export default function TeamExperts() {
             height: "553px",
             boxShadow: "0px 4px 10px 0px rgba(0, 0, 0, 0.25)",
           }}
-          className=" overflow-hidden box-border rounded-2xl"
+          className=" box-border overflow-hidden rounded-2xl sm:mx-auto"
         >
           <img className="mx-auto" src="/experts_images/image2.png" />
           <div
@@ -65,20 +68,20 @@ export default function TeamExperts() {
                 "linear-gradient(123deg, #5F2C51 -4.94%, #8B3654 90.42%)",
             }}
           >
-            <p className=" text-white font-bold text-2xl mt-7 mb-5">
+            <p className=" mb-5 mt-7 text-2xl font-bold text-white">
               {" "}
               Praveen Kumar
             </p>
             <p className=" mb-5 text-2xl text-white">Ex Company : </p>
             <div className="text-2xl text-white">
               <img
-                className="inline mr-5"
+                className="mr-5 inline"
                 src="/Other_images/microsoft-icon.svg"
                 alt=""
               />
               Microsoft
             </div>
-            <p className="mt-5 text-white text-sm">
+            <p className="mt-5 text-sm text-white">
               A pioneer in Learning & Development, Praveen always felt
               disengaged with traditional education. He believes supplementing
               education with relevant and engaging experience would prepare
@@ -94,7 +97,7 @@ export default function TeamExperts() {
             height: "553px",
             boxShadow: "0px 4px 10px 0px rgba(0, 0, 0, 0.25)",
           }}
-          className=" overflow-hidden box-border rounded-2xl"
+          className=" box-border overflow-hidden rounded-2xl sm:mx-auto"
         >
           <img className="mx-auto" src="/experts_images/image3.png" />
           <div
@@ -104,18 +107,20 @@ export default function TeamExperts() {
                 "linear-gradient(123deg, #5F2C51 -4.94%, #8B3654 90.42%)",
             }}
           >
-            <p className=" text-white font-bold text-2xl mt-7 mb-5">
+            <p className=" mb-5 mt-7 text-2xl font-bold text-white">
               {" "}
-              Anil Kumar Ghorakav
+              Pavan Kumar
             </p>
             <p className=" mb-5 text-2xl text-white">Ex Company : </p>
             <p className=" mb-5 text-2xl text-white">N/A</p>
-            <p className="mt-5 text-white text-sm">
-              As an entrepreneur who’s constantly finding ways to help people
-              reach greater heights in their career and an Ex-Oracle guy, I know
-              exactly what it takes to launch a career in the IT industry. The
-              truth is your background or your degrees don’t matter! What
-              matters is your skills, only your skills!
+            <p className="mt-5 text-sm text-white">
+              A startup enthusiast and a technology erudite, Pavan dons the
+              advisor hat at 10000 Coders. He ensures our curriculum is
+              up-to-date with the latest industry needs and our program delivery
+              uses the trending tools and processes adopted by the industry. He
+              has led and directed many learning programs for fresher engineers
+              in various roles at the companies he has served over the last 13+
+              years.
             </p>
           </div>
         </div>

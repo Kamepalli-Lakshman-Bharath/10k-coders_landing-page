@@ -1,0 +1,39 @@
+@media screen and (width>=425px) and (width<=639px) {
+  .welcomeText {
+    font-size: 12px;
+  }
+  .left {
+    width: 50%;
+    margin-top: 4%;
+    padding-left: 2%;
+  }
+  .heading {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .para {
+    font-size: x-small;
+  }
+  .img {
+    height: 50%;
+    width: 48%;
+    margin-top: 15%;
+  }
+  .btn {
+    padding: 20px 50px;
+    margin-top: 40px;
+  }
+}
+
+div .landingPage {
+  animation: slide 0.5s ease-in 1;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(200px);
+  }
+  100% {
+    transform: translate(0px);
+  }
+}
