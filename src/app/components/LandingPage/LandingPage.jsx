@@ -13,7 +13,7 @@ export default function LandingPage() {
         <TopBar getClickedItem={getItem} />
         <div className="flex">
           <div
-            className={`w-1/2 flex-shrink-0 sm:h-[400px] sm:pl-10 xl:ml-10 xl:h-full xl:pl-14`}
+            className={` ${styles.left} w-1/2 flex-shrink-0 sm:h-[400px] sm:pl-10 xl:ml-10 xl:h-full xl:pl-14`}
           >
             <h2
               className={`font-semibold sm:mt-5 sm:w-1/2 sm:text-lg md:mb-8 md:mt-14 md:text-xl  lg:text-2xl xl:mb-10 xl:mt-20 ${styles.welcomeText} `}
@@ -35,7 +35,9 @@ export default function LandingPage() {
               in coding but also in effective communication through our
               comprehensive training.
             </p>
-            <button className={ `${styles.btn} block rounded-xl bg-[#ff8541] sm:my-10  sm:px-14 sm:py-5 md:my-5 xl:px-20 xl:py-6`}></button>
+            <button
+              className={`${styles.btn} block rounded-xl bg-[#ff8541] sm:my-10  sm:px-14 sm:py-5 md:my-5 xl:px-20 xl:py-6`}
+            ></button>
           </div>
           <div
             className={` sm:px-6 sm:py-10 md:mt-14 md:p-4 xl:flex xl:items-end xl:p-0`}
@@ -88,7 +90,9 @@ export default function LandingPage() {
       <div>
         <TopBar getClickedItem={getItem} />
         <div className="flex xl:h-[100vh]  ">
-          <div className="  w-1/2 flex-shrink-0 sm:h-[400px] sm:pl-10 xl:ml-10 xl:pl-14">
+          <div
+            className={` ${styles.left} w-1/2 flex-shrink-0 sm:h-[400px] sm:pl-10 xl:ml-10 xl:pl-14`}
+          >
             <p className="xl:b-6 font-bold sm:mb-2 sm:mt-8 sm:text-2xl lg:text-4xl xl:mb-10 xl:mt-[8rem] xl:w-9/12 xl:text-5xl">
               Grab Your Free <br /> Lecture
             </p>
