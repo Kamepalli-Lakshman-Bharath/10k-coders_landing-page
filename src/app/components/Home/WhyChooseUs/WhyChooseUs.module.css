@@ -1,0 +1,41 @@
+.text {
+  position: absolute;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+  transform: translate(100px, -150px);
+  transition: all 0.5s ease-in;
+}
+.para {
+  position: absolute;
+  text-align: center;
+  width: 360px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: normal;
+  transition: all 0.5s ease-in;
+  opacity: 0;
+}
+
+.card:hover .para {
+  transform: translate(0px, -120px);
+  opacity: 1;
+}
+
+.card:hover .text {
+  transform: translate(100px, -200px);
+}
+
+@media screen and (max-width:640px) {
+  .card:hover .para {
+    transform: translate(-20px, -120px);
+    opacity: 1;
+  }
+  .card:hover .text {
+    transform: translate(70px, -200px);
+  }
+}
