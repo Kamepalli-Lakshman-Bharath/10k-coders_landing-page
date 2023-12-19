@@ -1,45 +1,54 @@
-import styles from "./Courses.module.css";
 
 const Courses = ({ curriculum, activeModuleNum, handleActiveModule }) => {
   const renderModule = (moduleNum, title, duration) => (
     <div
       key={moduleNum}
       onClick={() => handleActiveModule(moduleNum)}
-      className={`h-[105px] cursor-pointer rounded-[10px] p-2 xsm:w-[180px] xsm:flex-shrink-0 lg:h-[112px] ${
+      className={` ${
         activeModuleNum === moduleNum ? styles.active : ""
-      } bg-[#f8f9fa] xsm:bg-[#f8f9fa]`}
+      } cursor-pointer rounded-2xl hover:bg-[#d3d3d3] sm:flex-shrink-0  md:px-[20px] md:py-[10px] sm:p-2 sm:m-2 md:m-0  sm:w-[250px] md:w-[293px] xl:px-[30px] lg:py-[20px]`}
     >
-      <div className="flex justify-between">
+      {" "}
+      <p className="text-[10px] font-bold lg:mb-[10px]">Module {moduleNum}</p>
+      <div className="flex items-center gap-x-10 justify-between font-bold ">
         {" "}
-        <p>Module {moduleNum}</p> <p className={` xsm:hidden `}>{duration}</p>{" "}
+        <p className={`sm:text-[14px] lg:w-[144px] lg:text-[15px]`}>{title}</p>
+        <p className={`xsm:hidden text-[10px] `}>{duration}</p>{" "}
       </div>
-      <p className={`font-semibold xsm:mt-4 xsm:text-sm lg:mt-3`}>{title}</p>
     </div>
   );
 
   return (
-    <div id="Course" className="bg-[#dbf2fc] xsm:h-auto ">
-      <p className={`text-center text-2xl font-semibold xsm:py-6 sm:py-6 `}>
+    <div id="Course" className="bg-[#DDF5FF] sm:px-[10px] pb-[40px] md:px-[20px]">
+      <p
+        className={`py-6 text-center font-bold sm:text-[24px] md:text-[28px] lg:text-[32px]`}
+      >
         Courses that we Offer
       </p>
-      <div className={` flex xsm:flex-col sm:flex-col lg:mx-10  lg:flex-row`}>
+      <div
+        className={`flex sm:flex-col sm:gap-y-10 lg:gap-x-[47px] lg:gap-y-10 xl:flex-row`}
+      >
         <div
-          className={`w-96 overflow-hidden rounded-[10px] xsm:mx-auto xsm:mb-10 xsm:w-[75%] xsm:shadow-md sm:mx-auto  sm:mb-10 sm:w-[70%] lg:w-[36%] xl:w-[30%]`}
+          className={`flex flex-shrink-0 flex-col overflow-hidden rounded-2xl shadow-[0_4px_10px_0px_rgba(0,0,0,0.25)] sm:mx-auto sm:w-[90%] md:w-[60%] lg:w-[50%] xl:mx-[0px] xl:w-[381px]`}
         >
-          <img
-            src="/courses_images/courseheading.png"
-            className="w-full"
-            alt="Course-heading"
-          />
-          <div className="flex-shrink-0 bg-white p-4 xsm:px-10 xsm:text-sm sm:px-10 sm:text-lg">
-            <p className="py-2 font-semibold ">Course Outcome</p>
-            <p className="pb-2 text-[#838383]">
+          <div className="">
+            <img
+              src="/courses_images/courseheading.png"
+              className="w-full"
+              alt="Course-heading"
+            />
+          </div>
+          <div className="bg-white sm:p-3 md:p-4 xl:h-[417px]">
+            <p className="font-bold md:text-[18px] lg:text-[20px] ">
+              Course Outcome
+            </p>
+            <p className="text-[#838383]  sm:my-1 sm:text-[14px] md:text-[15px] lg:text-[16px] ">
               Full-stack Front-end Developer
             </p>
-            <p className="py-1 font-semibold xsm:text-sm  ">
+            <p className="font-bold sm:my-1 sm:text-[16px] md:text-[18px] lg:text-[20px]">
               What You Will Learn
             </p>
-            <p className="pb-2 tracking-tighter text-[#838383]">
+            <p className="leading-6 text-[#838383] sm:mb-[30px] sm:text-[14px] md:text-[15px] lg:text-[16px]">
               HTML, CSS, JavaScript, responsive design, user interface (UI)
               design, web accessibility, version control (Git), browser
               compatibility, front-end frameworks (e.g., React, Angular,
@@ -48,55 +57,52 @@ const Courses = ({ curriculum, activeModuleNum, handleActiveModule }) => {
               web apps (PWAs), JavaScript libraries (e.g.,JQuery), front-end
               build tools etc.
             </p>
-            <p
-              className={`cursor-pointer pb-[1.2rem] pt-8 text-center  text-xl font-semibold`}
-              style={{ color: "#ff8541" }}
+            <button
+              className={`mx-auto block cursor-pointer font-bold text-[#ff8541] sm:text-[16px] md:text-[18px] lg:text-[20px]`}
             >
               Enroll Now
-            </p>
+            </button>
           </div>
         </div>
         <div
-          className={`xsm:shadow-mdl l rounded-[10px] bg-white xsm:mx-10 xsm:mb-10 sm:mx-auto sm:mb-10  sm:w-[98%] sm:p-3  md:w-[90%] lg:h-[44rem] lg:w-[60%] `}
+          className={` w-full rounded-lg bg-white shadow-[0_4px_10px_0px_rgba(0,0,0,0.25)] sm:p-2 md:p-4`}
         >
-          <p className="p-3 text-xl text-[#AEAEAE]">Duration : 8 weeks</p>
-          <div
-            className={` flex xsm:w-[100%] xsm:flex-col sm:flex-row sm:justify-between lg:flex-row lg:justify-between xl:p-2`}
-          >
+          <p className="pb-1 text-xl text-[#AEAEAE]">Duration : 8 weeks</p>
+          <div className={`flex sm:flex-col md:flex-row md:gap-x-12`}>
             <div
-              className={`flex ${styles.scroll} cursor-pointer flex-col gap-y-[1px] xsm:h-[120px] xsm:w-[100%] xsm:flex-row xsm:gap-x-4 xsm:overflow-y-hidden xsm:overflow-x-scroll  xsm:px-5 sm:w-[40%] sm:flex-col sm:gap-y-4 md:w-[30%] lg:w-[30%] lg:flex-col lg:gap-y-[14px]`}
+              className={`flex sm:flex-row  md:flex-col ${styles.scroll}  md:gap-y-4 lg:gap-y-1`}
             >
               {curriculum.map(({ week, title }, idx) =>
                 renderModule(idx + 1, title, week),
               )}
             </div>
-            <div className=" sm:mx-auto sm:w-[50%] md:w-[60%] lg:w-[60%]">
-              <p className="py-2 xsm:my-4 xsm:text-center sm:mb-2">
+            <div className="w-full">
+              <p className="font-bold sm:p-2 md:p-0 lg:p-0 sm:text-[14px] md:text-[14px] lg:text-[15px]">
                 {curriculum[activeModuleNum - 1].week}
               </p>
-              <hr className="mb-8 h-1 bg-gradient-to-r from-[#F87B34] to-[#CB5C1C]" />
-              <ul className={` ${styles.points} xsm:h-[400px] sm:h-[362px]`}>
-                <li className="ml-10  font-semibold ">
-                  <p className="xsm:mb-4 sm:mb-2 md:mb-3 lg:mb-6">
+              <hr className="h-1 rounded-xl bg-gradient-to-r from-[#F87B34] to-[#CB5C1C] md:mt-[10px]" />
+              <ul
+                className={`list-disc sm:m-[10px] md:text-[14px] sm:text-[14px] lg:m-[27px] lg:text-[15px] ${styles.points}`}
+              >
+                <li>
+                  <p className="mb-[18px]  font-bold">
                     {curriculum[activeModuleNum - 1].title}
-                  </p>{" "}
-                  <ul
-                    className={`flex list-disc flex-col xsm:ml-10  xsm:h-[] xsm:gap-y-4 sm:gap-y-2 md:gap-y-6 lg:ml-10  `}
-                  >
+                  </p>
+                  <ul className={`ml-[30px] list-disc`}>
                     {curriculum[activeModuleNum - 1].points.map(
                       (point, idx) => (
-                        <li key={idx}>{point}</li>
+                        <li className="mb-[18px] " key={idx}>
+                          {point}
+                        </li>
                       ),
                     )}
                   </ul>
                 </li>
               </ul>
-              <hr className="mt-8 h-1 bg-gradient-to-r from-[#F87B34] to-[#CB5C1C]" />
-              <p
-                className={`cursor-pointer text-lg font-bold text-[#F87B34] xsm:my-6 xsm:text-center sm:my-10 sm:text-center lg:my-16 `}
-              >
+              <hr className="h-1 rounded-xl bg-gradient-to-r from-[#F87B34] to-[#CB5C1C] lg:mt-[10px]" />
+              <button className="mx-auto my-8 block text-center font-bold text-[#F87B34]">
                 Download Curriculum
-              </p>
+              </button>
             </div>
           </div>
         </div>

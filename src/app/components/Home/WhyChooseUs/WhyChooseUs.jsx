@@ -1,23 +1,22 @@
 "use client";
 import styles from "./WhyChooseUs.module.css";
 
-const WhyChooseUs=()=> {
+const WhyChooseUs = () => {
   return (
-    <div className={`xl:h-[100vh] xsm:pb-10 ${styles.main} bg-[#dbf2fc]`} >
-      <p className="xsm:py-6 text-center sm:py-6 text-2xl font-bold">
+    <div className={`bg-[#dbf2fc] pb-[40px]`}>
+      <p className="py-6 sm:text-[24px] text-center font-bold md:text-[28px] lg:text-[32px]">
         {" "}
         Why Choose Us?
       </p>
-      <p className="text-center md:px-16 xsm:text-sm xsm:px-14 mb-4 sm:px-6 text-xl">
+      <p className="lg:mx-auto sm:mb-10 sm:mx-10 text-center md:mx-20 md:mb-[40px] md:text-[18px] lg:w-[905px] lg:px-[0px] lg:text-[20px]">
         Exceptional instructors fueling innovation and shaping future tech
-        leaders with their expertise, <br /> guidance, and unwavering passion
+        leaders with their expertise, guidance, and unwavering passion
         for education
       </p>
-      <div className="flex flex-wrap justify-center gap-8 sm:pb-10">
+      <div className="flex flex-wrap justify-center gap-8 ">
         <div
-          className={`h-64 w-96 xsm:h-50 xsm:w-80 ${styles.card} relative shadow-md overflow-hidden rounded-2xl`}
+          className={` md:h-64 md:w-96 ${styles.card} relative overflow-hidden rounded-2xl shadow-[0_4px_4px_0px_rgba(0,0,0,0.25)]`}
         >
-
           <img
             className="h-full w-full"
             src="/WhyChooseUs_images/image1.png"
@@ -35,7 +34,7 @@ const WhyChooseUs=()=> {
           </p>
         </div>
         <div
-          className={`h-64 w-96 xsm:h-50 xsm:w-80 ${styles.card} shadow-md relative overflow-hidden rounded-2xl`}
+          className={` md:h-64 md:w-96 ${styles.card} relative overflow-hidden rounded-2xl shadow-[0_4px_4px_0px_rgba(0,0,0,0.25)]`}
         >
           {" "}
           <img
@@ -53,7 +52,7 @@ const WhyChooseUs=()=> {
           </p>
         </div>
         <div
-          className={`h-64 w-96 xsm:h-50 xsm:w-80 ${styles.card} shadow-md relative overflow-hidden rounded-2xl`}
+          className={` md:h-64 md:w-96 ${styles.card} relative overflow-hidden rounded-2xl shadow-[0_4px_4px_0px_rgba(0,0,0,0.25)]`}
         >
           {" "}
           <img
@@ -74,7 +73,7 @@ const WhyChooseUs=()=> {
           </p>
         </div>
         <div
-          className={`h-64 w-96 xsm:h-50 xsm:w-80 ${styles.card} shadow-md relative overflow-hidden rounded-2xl`}
+          className={` md:h-64 md:w-96 ${styles.card} relative overflow-hidden rounded-2xl shadow-[0_4px_4px_0px_rgba(0,0,0,0.25)]`}
         >
           {" "}
           <img
@@ -95,7 +94,7 @@ const WhyChooseUs=()=> {
           </p>
         </div>
         <div
-          className={`h-64 w-96 xsm:h-50 xsm:w-80 ${styles.card} shadow-md relative overflow-hidden rounded-2xl`}
+          className={` md:h-64 md:w-96 ${styles.card} relative overflow-hidden rounded-2xl shadow-[0_4px_4px_0px_rgba(0,0,0,0.25)]`}
         >
           {" "}
           <img
@@ -115,7 +114,7 @@ const WhyChooseUs=()=> {
           </p>
         </div>
         <div
-          className={`h-64 w-96 xsm:h-50 xsm:w-80 ${styles.card} shadow-md relative overflow-hidden rounded-2xl`}
+          className={` md:h-64 md:w-96 ${styles.card} relative overflow-hidden rounded-2xl shadow-[0_4px_4px_0px_rgba(0,0,0,0.25)]`}
         >
           {" "}
           <img
@@ -137,5 +136,5 @@ const WhyChooseUs=()=> {
       </div>
     </div>
   );
-}
-export default WhyChooseUs
+};
+export default WhyChooseUs;
