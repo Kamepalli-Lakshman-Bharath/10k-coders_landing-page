@@ -4,8 +4,10 @@
   background: linear-gradient(90deg, #f87b34 0%, #cb5c1c 93.98%);
 }
 
-@media screen and (width<=640) {
-  
+@media screen and (width<=767px) {
+  .scroll {
+    overflow-x: scroll;
+  }
 }
 .scroll::-webkit-scrollbar {
   height: 5px;
@@ -22,16 +24,16 @@
 }
 
 .scroll::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(90deg, #cb5c1c  0%,  #f87b34 93.98%);
+  background: linear-gradient(90deg, #cb5c1c 0%, #f87b34 93.98%);
 }
 
 @media screen and (width=640px) {
-  .scroll{
+  .scroll {
     flex-direction: col;
     height: 39rem;
     overflow: hidden;
   }
-  .points{
+  .points {
     height: 25rem;
   }
 }

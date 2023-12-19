@@ -13,11 +13,19 @@ import WhyChooseUs from "./WhyChooseUs/WhyChooseUs";
 const HomePage = () => {
   // top bar & landing page
   const [activeItem, setActiveItem] = useState("Home");
+  const [requestCallModal, setRequestCallModal]= useState(false)
   const getClickedItem = (item) => {
     setActiveItem(item);
   };
+  const handleRequestCallBackModal = ()=>{
+      setRequestCallModal(!requestCallModal)
+  }
   // courses
   const [activeModuleNum, setActiveModuleNum] = useState(1);
+  const [dropDown, setDropDown] = useState(true);
+  const handlDropDown = () => {
+    setDropDown(!dropDown);
+  };
   const handleActiveModule = (num) => {
     setActiveModuleNum(num);
   };
@@ -140,7 +148,12 @@ const HomePage = () => {
 
   return (
     <>
-      <TopBar getClickedItem={getClickedItem} activeItem={activeItem} />
+      <TopBar
+        getClickedItem={getClickedItem}
+        handlDropDown={handlDropDown}
+        isDropDown={dropDown}
+        activeItem={activeItem}
+      />
       <LandingPage activeItem={activeItem} />
       <Courses
         activeModuleNum={activeModuleNum}
@@ -149,8 +162,8 @@ const HomePage = () => {
       />
       <SuccessStories successStories={successStories} />
       <StudentTestimonials StudentTestimonialsData={StudentTestimonialsData} />
-      <TeamExperts />
-      <WhyChooseUs />
+     <TeamExperts />
+       <WhyChooseUs />
       <HiringPartners />
       <Footer />
     </>

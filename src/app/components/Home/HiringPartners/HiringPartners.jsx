@@ -1,21 +1,20 @@
 import styles from "./HiringPartners.module.css";
 
-const HiringPartners=()=> {
+const HiringPartners = () => {
   return (
-    <div className={`${styles.Hiring_partners} xl:h-[100vh]`}>
+    <div className={`${styles.Hiring_partners} pb-[40px]`}>
       <div>
-        <p className=" pb-3 sm:my-6 xsm:py-6 text-center text-2xl font-bold">
+        <p className="py-6 text-center sm:text-[24px] md:text-[28px] lg:text-[36px] font-bold">
           Hiring Partners
         </p>
-        <p className=" xsm:mb-6  md:px-16 sm:px-10 xsm:px-14 xsm:text-sm text-center text-xl font-light">
+        <p className="lg:mx-auto sm:mb-10 sm:mx-10 mb-[40px] text-center md:text-[18px] md:mx-20  lg:text-[20px] font-light lg:h-[48px] lg:w-[906px]">
           Hiring partners for 10000coders are industry collaborators who help
           identify and connect skilled individuals with relevant job
           opportunities, fostering a successful transition into the tech
           workforce.
-        </p>  
+        </p>
       </div>
-
-      <div className={`${styles.line1} xsm:pt-6 sm:pt-6 flex gap-x-[30px] `}>
+      <div className={`${styles.line1} flex gap-x-[30px] `}>
         <div className={`${styles.box2} ${styles.divbox}`}></div>
         <div className={`${styles.box1} ${styles.divbox}`}></div>
         <div className={`${styles.box3} ${styles.divbox}`}></div>
@@ -47,7 +46,7 @@ const HiringPartners=()=> {
         <div className={`${styles.box27} ${styles.divbox}`}></div>
         <div className={`${styles.box28} ${styles.divbox}`}></div>
       </div>
-      <div className={`${styles.line3} xsm:pb-6 sm:pb-6 flex gap-x-[30px] `}>
+      <div className={`${styles.line3} flex gap-x-[30px] `}>
         <div className={`${styles.box29} ${styles.divbox}`}></div>
         <div className={`${styles.box30} ${styles.divbox}`}></div>
         <div className={`${styles.box31} ${styles.divbox}`}></div>
@@ -65,5 +64,5 @@ const HiringPartners=()=> {
       </div>
     </div>
   );
-}
+};
 export default HiringPartners;

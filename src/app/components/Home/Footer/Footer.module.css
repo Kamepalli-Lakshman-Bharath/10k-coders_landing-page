@@ -1,11 +1,13 @@
-@media screen and (width>=425px) and (width<640px) {
+@media screen and (width<640px) {
 .main{
+    flex-wrap: wrap;
     font-size: x-small;
     justify-content: space-around;
     padding-bottom: 20px;
 }
 .logo{
     height: 45px;
+    width: 80px;
     margin-left: 10px;
     margin-bottom: 10px;
 }
@@ -23,8 +25,12 @@
     width: 90px;
 }
 .first{
+    font-size: x-small;
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+.social{
+    padding: 10px;
 }
 }

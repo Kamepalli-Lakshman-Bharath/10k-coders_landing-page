@@ -1,15 +1,15 @@
 import Link from "next/link";
+import styles from "./TopBar.module.css";
 import { CaretDown } from "../../../Assets/TopbarSvg/TopbarSvg";
 
-
-const TopBar = ({ getClickedItem, activeItem }) => {
+const TopBar = ({ getClickedItem, activeItem, handlDropDown, isDropDown }) => {
   const menuItem = (label, id) => (
     <p
       className={`${
         activeItem === id
-          ? "ease border-b-2  border-b-[#F87B34] text-[#F87B34] transition-all duration-150"
+          ? "ease border-b-2 border-b-[#F87B34] text-[#F87B34] transition-all duration-150"
           : ""
-      }  cursor-pointer sm:text-base lg:text-xl xsm:text-[14px]`}
+      } ${styles.item} xsm:text-[14px] cursor-pointer font-bold sm:text-base `}
       onClick={() => {
         getClickedItem(id);
       }}
@@ -19,26 +19,53 @@ const TopBar = ({ getClickedItem, activeItem }) => {
   );
 
   return (
-    <nav className="flex items-center justify-between justify-items-center sm:px-4 md:px-6 xl:px-6">
-      <div className="xsm:w-18 xsm:flex xsm:h-12 sm:h-20 sm:w-28 md:h-28 md:w-28 lg:h-[10rem] lg:w-[11rem]">
+    <nav
+      className={`flex ${styles.nav} items-center justify-between sm:px-4 md:mx-[20px] md:my-[20px] md:px-0 lg:mx-[35px] lg:my-[20px]`}
+    >
+      <div className="xsm:w-18 xsm:flex xsm:h-12 sm:h-20 sm:w-28 md:h-[70px] md:w-auto lg:h-[90px] lg:w-[140px] xl:h-[100] xl:w-[147px]">
         <img
-          className="h-full w-full xsm:h-full xsm:w-full"
-          src="/LandingPageImages/logo-1.png"
+          className="xsm:h-full xsm:w-full h-full w-full "
+          src="/LandingPageImages/Navbar-Logo.png"
         />
       </div>
-      <div className="flex  justify-between font-semibold xsm:w-4/6 sm:w-[56%] md:w-3/6 md:text-lg lg:text-xl   xl:p-2.5">
+      <div
+        className={`flex ${
+          isDropDown ? styles.menu : styles.dropdown
+        } xsm:w-[64%] xsm:gap-x-3 md:gap-x-4 sm:gap-x-3 lg:gap-x-10 sm:w-[56%]  md:w-auto`}
+      >
         {menuItem("Home", "Home")}
-        <Link href="#Course" scroll={true} passHref>
+        <Link href="#Course" scroll={true}>
           {menuItem("Course", "Course")}
         </Link>
         {menuItem("Scholarship", "Scholarship")}
         {menuItem("Free Lecture", "Free Lecture")}
+        <p
+          className={`cursor-pointer font-semibold ${styles.hide} border-b border-[#edf6f9] p-1 text-md  hover:text-[#CB5C1C]`}
+        >
+          <img
+            className="inline  h-5"
+            src="/LandingPageImages/login-bracket-svgrepo-com.svg"
+          />{" "}
+          Login
+        </p>
       </div>
       <div>
-        <button className="text-[#ff8541] xsm:mr-1  xsm:rounded-lg xsm:text-sm xsm:shadow-sm sm:rounded-xl sm:px-4 sm:py-2 sm:shadow-md md:px-5 md:text-lg lg:px-6 lg:py-[15px] lg:text-xl xsm:p-2 xl:px-5">
-          Login <CaretDown className="inline xsm:h-2 " />
+        <button
+          className={`text-[#FF8541] ${styles.hidebtn} xsm:p-2 xsm:text-sm rounded-2xl font-bold shadow-[0_2px_5px_0px_rgba(116,116,116,0.25)] sm:px-4 sm:py-2 md:px-[20px] md:py-[14px] lg:px-[24px] lg:py-[16px] lg:text-base`}
+        >
+          Login <CaretDown className="inline" />
         </button>
       </div>
+      <img
+        className={`h-10 cursor-pointer ${styles.hide} float-right shadow-[0_2px_5px_0px_rgba(116,116,116,0.25)] rounded-md p-2 mr-4 w-10`}
+        onClick={() => handlDropDown()}
+        src={`${
+          !isDropDown
+            ? "/LandingPageImages/menu-svgrepo-com.svg "
+            : "/LandingPageImages/cross-svgrepo-com.svg"
+        }`}
+        alt=""
+      />
     </nav>
   );
 };
