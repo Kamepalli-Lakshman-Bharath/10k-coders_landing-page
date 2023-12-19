@@ -1,3 +1,4 @@
+
 const LandingPage = ({ activeItem }) => {
   const renderHomeCourseContent = () => (
     <div className="flex justify-between pb-[70px] sm:flex-col md:flex-col lg:mx-[100px] xl:flex-row">
@@ -25,7 +26,7 @@ const LandingPage = ({ activeItem }) => {
           training.
         </p>
         <button
-          className={`mb-4 mr-[32px] rounded-2xl bg-[#FF8541] font-bold text-white shadow-[0_2px_5px_0px_rgba(116,116,116,0.25)] sm:px-[15px] sm:py-[10px] sm:text-[14px] md:px-[20px] md:py-[14px] lg:px-[24px] lg:py-[16px] lg:text-[16px]`}
+          className={`mr-[32px] mb-4 rounded-2xl bg-[#FF8541] font-bold text-white shadow-[0_2px_5px_0px_rgba(116,116,116,0.25)] sm:px-[15px] sm:py-[10px] sm:text-[14px] md:px-[20px] md:py-[14px] lg:px-[24px] lg:py-[16px] lg:text-[16px]`}
         >
           Get Enrolled
         </button>
@@ -64,7 +65,7 @@ const LandingPage = ({ activeItem }) => {
           capabilities.
         </p>
         <button
-          className={`mb-3 mr-[32px] rounded-2xl bg-[#FF8541] font-bold text-white shadow-[0_2px_5px_0px_rgba(116,116,116,0.25)] sm:px-[15px] sm:py-[10px] sm:text-[14px] md:px-[20px] md:py-[14px] lg:px-[24px] lg:py-[16px] lg:text-[16px]`}
+          className={`mr-[32px] mb-3 rounded-2xl bg-[#FF8541] font-bold text-white shadow-[0_2px_5px_0px_rgba(116,116,116,0.25)] sm:px-[15px] sm:py-[10px] sm:text-[14px] md:px-[20px] md:py-[14px] lg:px-[24px] lg:py-[16px] lg:text-[16px]`}
         >
           Take Assessment
         </button>
@@ -99,7 +100,7 @@ const LandingPage = ({ activeItem }) => {
           chance to learn and grow in the exciting world of web development
         </p>
         <button
-          className={`mb-3 mr-[32px] rounded-2xl bg-[#FF8541] font-bold text-white shadow-[0_2px_5px_0px_rgba(116,116,116,0.25)] sm:px-[15px] sm:py-[10px] sm:text-[14px] md:px-[20px] md:py-[14px] lg:px-[24px] lg:py-[16px] lg:text-[16px]`}
+          className={`mr-[32px] mb-3 rounded-2xl bg-[#FF8541] font-bold text-white shadow-[0_2px_5px_0px_rgba(116,116,116,0.25)] sm:px-[15px] sm:py-[10px] sm:text-[14px] md:px-[20px] md:py-[14px] lg:px-[24px] lg:py-[16px] lg:text-[16px]`}
         >
           Watch Free Lectures
         </button>
