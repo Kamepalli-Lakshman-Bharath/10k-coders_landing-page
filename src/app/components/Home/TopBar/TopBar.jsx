@@ -20,9 +20,9 @@ const TopBar = ({ getClickedItem, activeItem, handlDropDown, isDropDown }) => {
 
   return (
     <nav
-      className={`flex ${styles.nav} items-center justify-between sm:px-4 md:mx-[20px] md:my-[20px] md:px-0 lg:mx-[35px] lg:my-[20px]`}
+      className={`flex ${styles.nav} items-center justify-between sm:my-3 sm:mx-3 md:mx-[20px] md:my-[20px] lg:mx-[35px] lg:my-[20px]`}
     >
-      <div className="xsm:w-18 xsm:flex xsm:h-12 sm:h-20 sm:w-28 md:h-[70px] md:w-auto lg:h-[90px] lg:w-[140px] xl:h-[100] xl:w-[147px]">
+      <div className="xsm:w-18 xsm:flex xsm:h-12 sm:h-[50px] sm:w-[82px] md:h-[70px] md:w-auto lg:h-[90px] lg:w-[140px] xl:h-[100] xl:w-[147px]">
         <img
           className="xsm:h-full xsm:w-full h-full w-full "
           src="/LandingPageImages/Navbar-Logo.png"
@@ -31,7 +31,7 @@ const TopBar = ({ getClickedItem, activeItem, handlDropDown, isDropDown }) => {
       <div
         className={`flex ${
           isDropDown ? styles.menu : styles.dropdown
-        } xsm:w-[64%] xsm:gap-x-3 md:gap-x-4 sm:gap-x-3 lg:gap-x-10 sm:w-[56%]  md:w-auto`}
+        } xsm:w-[64%] justify-around xsm:gap-x-3 md:gap-x-4 sm:gap-x-3 lg:gap-x-10 sm:w-[68%] md:w-auto`}
       >
         {menuItem("Home", "Home")}
         <Link href="#Course" scroll={true}>
@@ -51,7 +51,7 @@ const TopBar = ({ getClickedItem, activeItem, handlDropDown, isDropDown }) => {
       </div>
       <div>
         <button
-          className={`text-[#FF8541] ${styles.hidebtn} xsm:p-2 xsm:text-sm rounded-2xl font-bold shadow-[0_2px_5px_0px_rgba(116,116,116,0.25)] sm:px-4 sm:py-2 md:px-[20px] md:py-[14px] lg:px-[24px] lg:py-[16px] lg:text-base`}
+          className={`text-[#FF8541] ${styles.hidebtn} xsm:p-2 xsm:text-sm rounded-2xl font-bold shadow-[0_2px_5px_0px_rgba(116,116,116,0.25)] sm:p-2 flex-shrink-0 md:px-[20px] md:py-[14px] lg:px-[24px] lg:py-[16px] lg:text-base`}
         >
           Login <CaretDown className="inline" />
         </button>

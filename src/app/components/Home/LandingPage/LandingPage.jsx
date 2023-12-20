@@ -1,9 +1,9 @@
 
-const LandingPage = ({ activeItem }) => {
+const LandingPage = ({ activeItem, handleRequestModal }) => {
   const renderHomeCourseContent = () => (
     <div className="flex justify-between pb-[70px] sm:flex-col md:flex-col lg:mx-[100px] xl:flex-row">
       <div
-        className={`sm:mx-auto  sm:mb-10 sm:w-[50%] md:mb-20 lg:w-[70%] xl:mx-[0px] xl:w-[35%]`}
+        className={`sm:mx-auto sm:mb-10 sm:w-[80%] md:w-[55%]  md:mb-20 lg:w-[70%] xl:mx-[0px] xl:w-[35%]`}
       >
         <p
           className={`font-bold sm:my-6 sm:text-[18px] md:my-8 md:text-[20px] lg:text-2xl `}
@@ -30,7 +30,7 @@ const LandingPage = ({ activeItem }) => {
         >
           Get Enrolled
         </button>
-        <button
+        <button onClick={()=> handleRequestModal()}
           className={`rounded-2xl font-bold text-[#FF8541] shadow-[0_2px_5px_0px_rgba(116,116,116,0.25)] sm:px-[15px] sm:py-[10px] sm:text-[14px] md:px-[20px] md:py-[14px] md:text-[16px] lg:px-[24px] lg:py-[16px]`}
         >
           Request Call Back
