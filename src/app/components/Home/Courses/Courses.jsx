@@ -1,3 +1,4 @@
+import styles from "./Courses.module.css";
 
 const Courses = ({ curriculum, activeModuleNum, handleActiveModule }) => {
   const renderModule = (moduleNum, title, duration) => (
@@ -6,20 +7,23 @@ const Courses = ({ curriculum, activeModuleNum, handleActiveModule }) => {
       onClick={() => handleActiveModule(moduleNum)}
       className={` ${
         activeModuleNum === moduleNum ? styles.active : ""
-      } cursor-pointer rounded-2xl hover:bg-[#d3d3d3] sm:flex-shrink-0  md:px-[20px] md:py-[10px] sm:p-2 sm:m-2 md:m-0  sm:w-[250px] md:w-[293px] xl:px-[30px] lg:py-[20px]`}
+      } cursor-pointer rounded-2xl hover:bg-[#d3d3d3] sm:m-2  sm:w-[250px] sm:flex-shrink-0 sm:p-2 md:m-0 md:w-[293px]  md:px-[20px] md:py-[10px] lg:py-[20px] xl:px-[30px]`}
     >
       {" "}
       <p className="text-[10px] font-bold lg:mb-[10px]">Module {moduleNum}</p>
-      <div className="flex items-center gap-x-10 justify-between font-bold ">
+      <div className="flex items-center justify-between gap-x-10 font-bold ">
         {" "}
         <p className={`sm:text-[14px] lg:w-[144px] lg:text-[15px]`}>{title}</p>
-        <p className={`xsm:hidden text-[10px] `}>{duration}</p>{" "}
+        <p className={`text-[10px] xsm:hidden `}>{duration}</p>{" "}
       </div>
     </div>
   );
 
   return (
-    <div id="Course" className="bg-[#DDF5FF] sm:px-[10px] pb-[40px] md:px-[20px]">
+    <div
+      id="Course"
+      className="bg-[#DDF5FF] pb-[40px] sm:px-[10px] md:px-[20px]"
+    >
       <p
         className={`py-6 text-center font-bold sm:text-[24px] md:text-[28px] lg:text-[32px]`}
       >
@@ -77,12 +81,12 @@ const Courses = ({ curriculum, activeModuleNum, handleActiveModule }) => {
               )}
             </div>
             <div className="w-full">
-              <p className="font-bold sm:p-2 md:p-0 lg:p-0 sm:text-[14px] md:text-[14px] lg:text-[15px]">
+              <p className="font-bold sm:p-2 sm:text-[14px] md:p-0 md:text-[14px] lg:p-0 lg:text-[15px]">
                 {curriculum[activeModuleNum - 1].week}
               </p>
               <hr className="h-1 rounded-xl bg-gradient-to-r from-[#F87B34] to-[#CB5C1C] md:mt-[10px]" />
               <ul
-                className={`list-disc sm:m-[10px] md:text-[14px] sm:text-[14px] lg:m-[27px] lg:text-[15px] ${styles.points}`}
+                className={`list-disc sm:m-[10px] sm:text-[14px] md:text-[14px] lg:m-[27px] lg:text-[15px] ${styles.points}`}
               >
                 <li>
                   <p className="mb-[18px]  font-bold">

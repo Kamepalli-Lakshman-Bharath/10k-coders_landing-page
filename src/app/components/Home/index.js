@@ -9,15 +9,16 @@ import SuccessStories from "./SuccessStories/SuccessStories";
 import TeamExperts from "./TeamExperts/TeamExperts";
 import TopBar from "./TopBar/TopBar";
 import WhyChooseUs from "./WhyChooseUs/WhyChooseUs";
+import RequestCallBack from "./Modal/RequestCallback/RequestCallback";
 
 const HomePage = () => {
   // top bar & landing page
   const [activeItem, setActiveItem] = useState("Home");
-  const [requestCallModal, setRequestCallModal]= useState(false)
+  const [requestCallModal, setRequestCallModal]= useState(false);
   const getClickedItem = (item) => {
     setActiveItem(item);
   };
-  const handleRequestCallBackModal = ()=>{
+  const handleRequestModal = ()=>{
       setRequestCallModal(!requestCallModal)
   }
   // courses
@@ -154,7 +155,8 @@ const HomePage = () => {
         isDropDown={dropDown}
         activeItem={activeItem}
       />
-      <LandingPage activeItem={activeItem} />
+      <RequestCallBack handleRequestModal={handleRequestModal} requestCallModal={requestCallModal} /> 
+      <LandingPage handleRequestModal={handleRequestModal} activeItem={activeItem} />
       <Courses
         activeModuleNum={activeModuleNum}
         handleActiveModule={handleActiveModule}

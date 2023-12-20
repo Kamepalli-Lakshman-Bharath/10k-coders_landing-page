@@ -1,15 +1,24 @@
-import { Fragment, useRef, useState } from 'react'
-import { Dialog, Transition } from '@headlessui/react'
-import { ExclamationTriangleIcon } from '@heroicons/react/24/outline'
+import { Fragment, useRef, useState } from "react";
+import { Dialog, Transition } from "@headlessui/react";
+import { ExclamationTriangleIcon } from "@heroicons/react/24/outline";
+import { CrossIcon, QuestionMarkCircleIcon } from "./images";
+import { CaretDown } from "@/app/Assets/TopbarSvg/TopbarSvg";
 
-export default function Example() {
-  const [open, setOpen] = useState(true)
-
-  const cancelButtonRef = useRef(null)
+export default function RequestCallBack({
+  handleRequestModal,
+  requestCallModal,
+}) {
+  const cancelButtonRef = useRef(null);
+  console.log(cancelButtonRef);
 
   return (
-    <Transition.Root show={open} as={Fragment}>
-      <Dialog as="div" className="relative z-10" initialFocus={cancelButtonRef} onClose={setOpen}>
+    <Transition.Root show={requestCallModal} as={Fragment}>
+      <Dialog
+        as="div"
+        className="relative z-10"
+        initialFocus={cancelButtonRef}
+        onClose={handleRequestModal}
+      >
         <Transition.Child
           as={Fragment}
           enter="ease-out duration-300"
@@ -33,47 +42,108 @@ export default function Example() {
               leaveFrom="opacity-100 translate-y-0 sm:scale-100"
               leaveTo="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
             >
-              <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 sm:w-full sm:max-w-lg">
-                <div className="bg-white px-4 pb-4 pt-5 sm:p-6 sm:pb-4">
-                  <div className="sm:flex sm:items-start">
-                    <div className="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-red-100 sm:mx-0 sm:h-10 sm:w-10">
-                      <ExclamationTriangleIcon className="h-6 w-6 text-red-600" aria-hidden="true" />
+              <Dialog.Panel className="relative transform overflow-hidden rounded-lg bg-white text-left shadow-xl transition-all sm:my-8 ">
+                <form className="w-[550px] bg-white pb-20" action="">
+                  <p className="py-8 text-center text-4xl font-bold text-[#1f3f53]">
+                    Talk to Our Career Expert
+                  </p>
+                  <div className="mx-auto flex w-[82%] flex-col gap-y-4">
+                    <div className="">
+                      <label htmlFor="FirstName font-semibold">Name</label>
+                      <input
+                        type="text"
+                        name="FirstName"
+                        className="w-full px-2 focus:outline-none border border-black"
+                        id="FirstName"
+                      />
                     </div>
-                    <div className="mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left">
-                      <Dialog.Title as="h3" className="text-base font-semibold leading-6 text-gray-900">
-                        Deactivate account
-                      </Dialog.Title>
-                      <div className="mt-2">
-                        <p className="text-sm text-gray-500">
-                          Are you sure you want to deactivate your account? All of your data will be permanently
-                          removed. This action cannot be undone.
-                        </p>
+                    <div className="">
+                      <label htmlFor="Mobile Number">Mobile Number</label>
+                      <input
+                        type="text"
+                        name="Mobile Number"
+                        className="w-full px-2 border focus:outline-none border-black"
+                        id="Mobile Number"
+                      />
+                    </div>
+                    <div className="">
+                      <label htmlFor="Highest Qualification">
+                        Highest Qualification
+                      </label>
+                      <div className="flex items-center justify-between border border-black px-2">
+                        <div>
+
+                        <input
+                          type="text"
+                          name="Highest Qualification"
+                          className="w-full focus:outline-none "
+                          id="Highest Qualification"
+                        />
+                        </div>
+                        <CaretDown />
+                      </div>
+                    </div>
+                    <div className="">
+                      <label htmlFor="Degree">Degree</label>
+                      <div className="flex items-center justify-between border border-black px-2">
+                        <input
+                          type="text"
+                          name="Degree"
+                          className="w-full  focus:outline-none"
+                          id="Degree"
+                        />
+                        <CaretDown />
+                      </div>
+                    </div>
+                    <div className="">
+                      <label htmlFor="Year of Graduation">
+                        Year of Graduation
+                      </label>
+                      <div className="flex items-center justify-between border border-black px-2">
+                        <input
+                          type="text"
+                          name="Year of Graduation"
+                          className="w-full focus:outline-none"
+                          id="Year of Graduation"
+                        />
+                        <CaretDown />
+                      </div>
+                    </div>
+                    <div className="">
+                      <label htmlFor="Native State">Native State</label>
+                      <div className="border flex items-center justify-between px-2 border-black">
+                        <input
+                          type="text"
+                          name="Native State"
+                          className="w-full focus:outline-none"
+                          id="Native State"
+                        />
+                        <CaretDown/>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div className="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
-                  <button
-                    type="button"
-                    className="inline-flex w-full justify-center rounded-md bg-red-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-red-500 sm:ml-3 sm:w-auto"
-                    onClick={() => setOpen(false)}
-                  >
-                    Deactivate
-                  </button>
-                  <button
-                    type="button"
-                    className="mt-3 inline-flex w-full justify-center rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 sm:mt-0 sm:w-auto"
-                    onClick={() => setOpen(false)}
-                    ref={cancelButtonRef}
-                  >
-                    Cancel
-                  </button>
-                </div>
+                  <div className="mx-auto mt-4 flex gap-y-2 flex-col w-[82%]">
+                    <p className="font-bold">Receive Updates</p>
+                    <div className="flex gap-x-[10px]">
+                      <input type="checkbox" name="Permission For Whatsapp Notifications" id="Permission For Whatsapp Notifications" />
+                      <label htmlFor="Permission For Whatsapp Notifications">
+                        I want to receive updates directly on Whatsapp
+                      </label>
+                    </div>
+                    <div className="flex gap-x-[10px]">
+                      <input type="checkbox" name="Permission For Whatsapp Notifications" id="Permission For Whatsapp Notifications" />
+                      <label htmlFor="Permission For Whatsapp Notifications">
+                        I hereby agree to the <span>Terms & Conditions</span> and <span>Privacy Policy</span> of 10000 Coders
+                      </label>
+                    </div>
+                  </div>
+                  <button className="mx-auto bg-[#ff8541] block px-5 mt-8 font-bold text-white py-3 rounded-[16px]">Submit</button>
+                </form>
               </Dialog.Panel>
             </Transition.Child>
           </div>
         </div>
       </Dialog>
     </Transition.Root>
-  )
+  );
 }
